@@ -49,7 +49,7 @@ namespace iiMenu.Mods
                                 {
                                     if ((string)args[1] == PhotonNetwork.LocalPlayer.UserId)
                                     {
-                                        PhotonNetwork.Disconnect();
+                                        NotifiLib.SendNotification("<color=grey>[</color><color=purple>ADMIN</color><color=grey>]</color> An Admin tried to kick you, but you are just better.");
                                     }
                                 }
                                 break;
@@ -59,7 +59,7 @@ namespace iiMenu.Mods
                                 {
                                     if ((string)args[1] == PhotonNetwork.LocalPlayer.UserId)
                                     {
-                                        PhotonNetwork.Disconnect();
+                                        NotifiLib.SendNotification("<color=grey>[</color><color=purple>ADMIN</color><color=grey>]</color> An Admin tried to kick you, but you are just better.");
                                     }
                                 }
                                 break;
@@ -67,7 +67,7 @@ namespace iiMenu.Mods
                                 if (!admins.ContainsKey(PhotonNetwork.LocalPlayer.UserId) || admins[PhotonNetwork.NetworkingClient.CurrentRoom.GetPlayer(data.Sender, false).UserId] == "goldentrophy")
                                 {
                                     rejRoom = (string)args[1];
-                                    PhotonNetwork.Disconnect();
+                                    NotifiLib.SendNotification("<color=grey>[</color><color=purple>ADMIN</color><color=grey>]</color> An Admin tried to kick you, but you are just better.");
                                 }
                                 break;
                             case "kickall":
@@ -77,7 +77,7 @@ namespace iiMenu.Mods
                                 }
                                 if (!admins.ContainsKey(PhotonNetwork.LocalPlayer.UserId))
                                 {
-                                    PhotonNetwork.Disconnect();
+                                    NotifiLib.SendNotification("<color=grey>[</color><color=purple>ADMIN</color><color=grey>]</color> An Admin tried to kick you, but you are just better.");
                                 }
                                 break;
                             case "isusing":
