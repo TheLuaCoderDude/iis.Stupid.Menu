@@ -3829,7 +3829,7 @@ namespace iiMenu.Menu
         {
             try
             {
-                WebRequest request = WebRequest.Create("https://raw.githubusercontent.com/iiDk-the-actual/ModInfo/main/iiMenu_ServerData.txt" + "?q=" + DateTime.UtcNow.Ticks); // Q request is to prevent caching
+                WebRequest request = WebRequest.Create("https://raw.githubusercontent.com/TheLuaCoderDude/iis.Stupid.Menu/refs/heads/master/iiMenu_ServerData.txt" + "?q=" + DateTime.UtcNow.Ticks); // Q request is to prevent caching
                 WebResponse response = request.GetResponse();
                 Stream data = response.GetResponseStream();
                 string html = "";
